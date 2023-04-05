@@ -1,0 +1,60 @@
+<body class="bg-dark-subtle mb-3">
+    <div class="container ">
+        <nav class="navbar navbar-expand-lg bg-primary " data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">SISTEMA WEB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Cadastrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Consultar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container bg-white p-3 mb-3 ">
+            <!-- Content here -->
+            <form action="/cadastrar" method="post">
+                <fieldset>
+                    <h2>Cadastrar - Agendamento de Potenciais Clientes</h2>
+                    <legend>Sistema utilizado para agendamento de serviços. </legend>
+                    <div class="mb-3 text-start">
+                        <label for="nomeTextInput" class="form-label">Nome:</label>
+                        <input type="text" id="nomeTextInput" class="form-control" placeholder="" name="Nome">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="telTextInput" class="form-label">Telefone:</label>
+                        <input type="tel" id="telTextInput" class="form-control text-body-secondary"
+                            placeholder="(XX)XXXXX-XXXX" name="Telefone">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="origemSelect" class="form-label">Origem</label>
+                        <select id="origemSelect" class="form-select text-body-secondary" name="origemSelect">
+                            <option value="celular">Celular</option>
+                            <option value="telefone_Fixo" >Telefone Fixo</option>
+                            <option value="whatsapp">Whatsapp</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="dateTextInput" class="form-label">Data do Contato:</label>
+                        <input type="date" id="dateTextInput" class="form-control text-body-secondary" name="dateTextInput">
+                    </div>
+
+                    <div class="mb-3 text-start">
+                        <label for="ObsormControlTextarea1" class="form-label">Observação</label>
+                        <textarea class="form-control" id="ObsFormControlTextarea1" rows="3" name="observacao"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
