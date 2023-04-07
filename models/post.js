@@ -8,5 +8,5 @@ const agendamentos = db.sequelize.define('agendamento',{
     observacao: { type: db.Sequelize.TEXT }
 })
 
-agendamentos.sync({ force: true })
+//agendamentos.sync({ force: true })
 module.exports = agendamentos

@@ -15,6 +15,16 @@ app.use(bodyParser.json())
 app.get("/", function (req, res) {
     res.render("cadastro")
 })
+app.get("/consulta", function (req, res) {
+    post.findAll().then(function (post) {
+        res.render("consulta", {post})
+        console.log(post)
+    }).catch(function (erro) {
+        res.send("Falha ao carregar dados: " + erro)
+    })
+
+})
+
 app.post("/cadastrar", function (req, res) {
     post.create({
         Nome: req.body.Nome,
@@ -23,10 +33,10 @@ app.post("/cadastrar", function (req, res) {
         dateTextInput: req.body.dateTextInput,
         observacao: req.body.observacao
 
-    }).then(function(){
-        res.send("Dados enviados com sucesso!")
-    }).catch(function(erro){
-        res.send("Falha ao cadastrar dados: "+ erro)
+    }).then(function () {
+        res.redirect("/")
+    }).catch(function (erro) {
+        res.send("Falha ao cadastrar dados: " + erro)
     })
 })
 
