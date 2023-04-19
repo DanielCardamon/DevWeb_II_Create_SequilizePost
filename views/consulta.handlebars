@@ -1,0 +1,76 @@
+<body class="bg-dark-subtle mb-3">
+    <div class="container ">
+        <nav class="navbar navbar-expand-lg bg-primary " data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">SISTEMA WEB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Cadastrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/consulta">Consultar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container bg-white p-3 mb-3 ">
+            <!-- Content here -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        Nome
+                    </div>
+                    <div class="col-sm">
+                        Telefone
+                    </div>
+                    <div class="col-sm">
+                        Origem
+                    </div>
+                    <div class="col-sm">
+                        Data
+                    </div>
+                    <div class="col-sm">
+                        Observação
+                    </div>
+                    <div class="col-sm">
+                        Ação
+                    </div>
+                </div>
+                {{#each post}}
+                    {{#dataValues}}
+                        <div class="row">
+                            <div class="col-sm">
+                                {{Nome}}
+                            </div>
+                            <div class="col-sm">
+                                {{Telefone}}
+                            </div>
+                            <div class="col-sm">
+                                {{origemSelect}}
+                            </div>
+                            <div class="col-sm">
+                                {{dateTextInput}}
+                            </div>
+                            <div class="col-sm">
+                                {{observacao}}
+                            </div>
+                            <div class="col-sm">
+                                <a href="/excluir/{{id}}" class="btn btn-secondary btn-sm active ms-0 m-1" role="button" aria-pressed="true">Excluir</a>
+                            </div>
+                        </div>
+                    {{/dataValues}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+</body>

@@ -23,7 +23,7 @@ const Agendamento = sequelize.define("agendamentos", {
     observacao: { type: Sequelize.TEXT }
 })
 
-Agendamento.sync({ force: true })
+//Agendamento.sync({ force: true })
 //Agendamento.sync({ })
 /*
 Agendamento.create({
